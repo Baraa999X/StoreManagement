@@ -32,6 +32,17 @@ The project manages products, categories, customers, inventory, and orders, with
 - Customer-specific order access and authorization
 - Transactional operations to help maintain order and inventory consistency
 
+## Architecture
+
+The project follows the **Clean Architecture** approach, separating the application into four projects with distinct responsibilities:
+
+- **StoreManagement.Domain** — Contains domain entities and core business types.
+- **StoreManagement.Application** — Contains application use cases, business logic, DTOs, and interfaces.
+- **StoreManagement.Infrastructure** — Implements data access and integrates with Entity Framework Core and SQL Server.
+- **StoreManagement.API** — Exposes HTTP endpoints through controllers and handles application configuration and authentication.
+
+This separation helps keep business logic independent of infrastructure concerns and improves maintainability and testability.
+
 ## Project Structure
 
 The solution is organized into four projects:
